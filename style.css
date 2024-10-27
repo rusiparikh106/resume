@@ -1,49 +1,68 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body and Font Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #333;
-    line-height: 1.6;
-    padding: 20px;
     background-color: #f4f4f4;
+    padding: 20px;
 }
 
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
 header {
     text-align: center;
     margin-bottom: 20px;
 }
 
 header h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     color: #333;
+    font-weight: 700;
 }
 
-header p {
+.subtitle {
+    font-size: 1.2em;
+    color: #555;
+    font-weight: 600;
+}
+
+.summary {
     font-size: 1em;
     color: #666;
+    margin-top: 5px;
+    line-height: 1.4;
 }
 
-a {
+.contact a {
     color: #0275d8;
     text-decoration: none;
 }
 
-h2 {
-    font-size: 1.5em;
-    color: #333;
+/* Section Styling */
+.section {
     margin-top: 20px;
 }
 
-section {
-    background: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.section h2 {
+    font-size: 1.5em;
+    color: #333;
+    border-bottom: 2px solid #0275d8;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .job {
@@ -53,9 +72,10 @@ section {
 .job h3 {
     font-size: 1.2em;
     color: #555;
+    font-weight: 600;
 }
 
-.job p {
+.job-details {
     font-size: 0.9em;
     color: #777;
     margin-bottom: 5px;
@@ -64,10 +84,30 @@ section {
 ul {
     list-style-type: disc;
     margin-left: 20px;
+    color: #333;
 }
 
+li {
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+/* Skills, Languages, and Interests Styling */
+.section p, .section ul {
+    font-size: 1em;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Media Queries */
 @media (max-width: 600px) {
-    body {
-        padding: 10px;
+    .container {
+        padding: 15px;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    .section h2 {
+        font-size: 1.3em;
     }
 }
